@@ -123,3 +123,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#not committing original or reduced datasets
+crimes_*.csv
