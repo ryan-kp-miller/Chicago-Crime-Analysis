@@ -3,13 +3,16 @@
 ## Data Preprocessing
 - [X] Only keep crimes from the last 10 years
 - [X] Drop unneeded columns from dataset
-- [ ] Pull in Community Area Names and Regions
-- [ ] Create Time of Day column based on the date of the crime (e.g. Morning, Afternoon, Evening, Night)
-- [ ] Create Month and Day columns based on the date of the crime
+- [X] Clean up the text columns (Primary Type and Location Description)
+- [X] Pull in Community Area Names and Regions
+- [ ] Create Month, day of week, and time of day columns based on the date of the crime
 
 
 ## Data Exploration
 - [ ] Display the descriptions of the columns
+- [ ] Most and least common types of crime
+- [ ] Regions with the most and least crime
+- [ ] Community Areas with the most and least crime 
 - [ ] Visualize the number of crimes by the different categorical variables (e.g. Year, Month, Time of Day, Description)
 - [ ] Create a Choropleth Map using the locations of the crimes
 
@@ -34,6 +37,7 @@
 
 
 ## Web App
+- [ ] Pre-aggregate dataset to reduce lag when displaying and filtering the visualizations
 - [ ] Create an introduction page with a description of the data, a summary of the analysis, and a short description of the different pages in the web app
 - [ ] Create a page with a Choropleth map of crimes throughout the city
 - [ ] Create a page with different data visualizations from the data exploration stage:
