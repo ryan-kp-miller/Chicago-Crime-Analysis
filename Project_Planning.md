@@ -5,14 +5,14 @@
 - [X] Drop unneeded columns from dataset
 - [X] Clean up the text columns (Primary Type and Location Description)
 - [X] Pull in Community Area Names and Regions
-- [ ] Create Month, day of week, and time of day columns based on the date of the crime
-
+- [X] Create Month, day of week, and time of day columns based on the date of the crime
+- [ ] Create input dataset for prediction
 
 ## Data Exploration
 - [ ] Display the descriptions of the columns
 - [ ] Most and least common types of crime
 - [ ] Regions with the most and least crime
-- [ ] Community Areas with the most and least crime 
+- [ ] Community Areas with the most and least crime
 - [ ] Visualize the number of crimes by the different categorical variables (e.g. Year, Month, Time of Day, Description)
 - [ ] Create a Choropleth Map using the locations of the crimes
 
@@ -35,8 +35,7 @@
 - [ ] Explain the final algorithm used
 - [ ] Create a script to train and store the final model
 
-
-## Web App
+## Power BI Dashboard
 - [ ] Pre-aggregate dataset to reduce lag when displaying and filtering the visualizations
 - [ ] Create an introduction page with a description of the data, a summary of the analysis, and a short description of the different pages in the web app
 - [ ] Create a page with a Choropleth map of crimes throughout the city
@@ -46,7 +45,6 @@
   - [ ] Line chart showing the trends of the different regions over the last 10 years
   - [ ] Have dropdowns for the primary and secondary descriptions of crimes
 - [ ] Create a page with a description of the prediction experimentation and results
-
 
 ## Wrapping Up
 - [ ] Create a script to preprocessing the original dataset
