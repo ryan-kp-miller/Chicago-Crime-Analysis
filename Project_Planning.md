@@ -9,20 +9,16 @@
 - [X] Remove Nulls from the dataset
 - [X] Create input dataset for prediction
 - [X] Add in homicides data and repeat steps above
+- [X] Add community area population for calculating crimes per capita
 
 ## Data Exploration
-- [ ] Display the descriptions of the columns
-- [ ] Most and least common types of crime
-- [ ] Regions with the most and least crime
-- [ ] Community Areas with the most and least crime
-- [ ] Visualize the number of crimes by the different categorical variables (e.g. Year, Month, Time of Day, Description)
-- [ ] Create a Choropleth Map using the locations of the crimes
-
-## Hypothesis Testing
-- [ ] More crimes occur on weekends (including Friday)
-- [ ] More crimes occur on the South side
-- [ ] More crimes occur during the summer and less in the winter
-- [ ] More crimes occur at night
+- [X] Display the descriptions of the columns
+- [X] Most and least common types of crime
+- [X] Regions with the most and least crime
+- [X] Regions with the most and least homicides
+- [X] Community Areas with the most and least crime
+- [ ] Visualize the number of crimes per capita by the different categorical variables (e.g. Year, Month, Time of Day, Season, Description)
+- [ ] Repeat visualizations with estimated crimes/homicides per capita
 
 ## Prediction
 - [ ] Predict the number of crimes coming up
