@@ -23,7 +23,6 @@
 - [ ] More crimes occur on the South side
 - [ ] More crimes occur during the summer and less in the winter
 - [ ] More crimes occur at night
-- [ ] ...
 
 ## Prediction
 - [ ] Predict the number of crimes coming up
