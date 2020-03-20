@@ -6,6 +6,7 @@
 - [X] Clean up the text columns (Primary Type and Location Description)
 - [X] Pull in Community Area Names and Regions
 - [X] Create Month, day of week, and time of day columns based on the date of the crime
+- [X] Remove Nulls from the dataset
 - [ ] Create input dataset for prediction
 
 ## Data Exploration
