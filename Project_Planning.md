@@ -18,7 +18,7 @@
 - [X] Community Areas with the most and least crime/homicides
 - [X] Visualize the number of crimes per capita by the different Date-based categorical variables (e.g. Year, Month, Time of Day, Season, Description)
 - [X] Repeat visualizations with estimated crimes/homicides per capita
-- [ ] Write short summaries for each section
+- [X] Write short summaries for each section
 
 ## Prediction
 - [ ] Predict the number of crimes coming up
