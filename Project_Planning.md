@@ -14,11 +14,11 @@
 ## Data Exploration
 - [X] Display the descriptions of the columns
 - [X] Most and least common types of crime
-- [X] Regions with the most and least crime
-- [X] Regions with the most and least homicides
-- [X] Community Areas with the most and least crime
-- [ ] Visualize the number of crimes per capita by the different categorical variables (e.g. Year, Month, Time of Day, Season, Description)
-- [ ] Repeat visualizations with estimated crimes/homicides per capita
+- [X] Regions with the most and least crime/homicides
+- [X] Community Areas with the most and least crime/homicides
+- [X] Visualize the number of crimes per capita by the different Date-based categorical variables (e.g. Year, Month, Time of Day, Season, Description)
+- [X] Repeat visualizations with estimated crimes/homicides per capita
+- [ ] Write short summaries for each section
 
 ## Prediction
 - [ ] Predict the number of crimes coming up
@@ -41,6 +41,13 @@
   - [ ] Bar chart showing the number of crimes per month of the year
   - [ ] Line chart showing the trends of the different regions over the last 10 years
   - [ ] Have dropdowns for the primary and secondary descriptions of crimes
+  - [ ] Most and Least Common Types of Crimes
+  - [ ] Most and Least Common Locations of Crimes
+  - [ ] Most and Least Arrests by Community Area
+  - [ ] Most and Least Arrests by Region
+  - [ ] Most and Least Domestic Crimes by Community Area
+  - [ ] Most and Least Domestic Crimes by Region
+  - [ ] Most and Least Common Locations of Crimes
 - [ ] Create a page with a description of the prediction experimentation and results
 
 ## Wrapping Up
