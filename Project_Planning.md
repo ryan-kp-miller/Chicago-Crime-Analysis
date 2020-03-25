@@ -7,7 +7,6 @@
 - [X] Pull in Community Area Names and Regions
 - [X] Create Month, day of week, time of day, and season columns based on the date of the crime
 - [X] Remove Nulls from the dataset
-- [X] Create input dataset for prediction
 - [X] Add in homicides data and repeat steps above
 - [X] Add community area population for calculating crimes per capita
 
@@ -21,13 +20,11 @@
 - [X] Write short summaries for each section
 
 ## Prediction
-- [ ] Predict the number of crimes coming up
-- [ ] Experiment with different regression algorithms (OLS, Ridge, Lasso, Elastic Net, Random Forest, DL)
-- [ ] Determine if the model is statistically significant
-- [ ] Determine which variables are statistically significant
+- [ ] Predict whether an arrest will be made for a crime
+- [ ] Experiment with different classification algorithms (Logistic Regression, Random Forest, DL, ...)
 - [ ] Determine which variables have the largest impact on the model
 - [ ] Explain what the model coefficients mean
-- [ ] Determine the R^2, RMSE, and MAE of the model
+- [ ] Determine the accuracy,
 - [ ] Explain what the metrics above represent with regards to this dataset
 - [ ] Explain the final algorithm used
 - [ ] Create a script to train and store the final model
