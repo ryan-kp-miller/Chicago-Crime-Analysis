@@ -126,3 +126,6 @@ dmypy.json
 
 #not committing original or reduced datasets
 crimes_*.csv
+
+#not committing project planning doc
+Project_Planning.md
