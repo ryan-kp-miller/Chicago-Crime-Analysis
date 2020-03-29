@@ -46,6 +46,6 @@ After performing hyper-parameter tuning on both models, I was able to achieve 87
 
 Because the best I was able to achieve was only 7% higher than the baseline validation accuracy (predicting no arrest every time), it appears that either the current dataset isn't the best for predicting arrests or the techniques I was using weren't enough to help the models perform better.
 
-In the future, I hope to reattempt this problem when I have learned new techniques to help with imbalanced class distributions. One idea I have as of 3/29/2020 are using under-sampling techniques.
+In the future, I hope to reattempt this problem when I have learned new techniques to help with imbalanced class distributions. One idea I have as of 3/29/2020 is using under-sampling techniques.
 
 ## Dashboard Setup
