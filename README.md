@@ -1,6 +1,6 @@
 # Chicago Crime Analysis
 
-Here I performed an analysis of the crime within Chicago based on this publicly provided [dataset](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2) from the city of Chicago. My two main goals with this project were to create a machine learning model to predict whether a new crime will get an arrest and to build a dashboard using Power BI to allow for interactive exploration of the data. Unfortunately, I wasn't able to achieve a significant increase over the baseline accuracy (covered in the [ML Results](#ml-results) section). But I was able to build the interactive dashboard that you can download here.
+Here I performed an analysis of the crime within Chicago based on this publicly provided [dataset](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2) from the city of Chicago. My two main goals with this project were to create a machine learning model to predict whether a new crime will get an arrest and to build a dashboard using Power BI to allow for interactive exploration of the data. Unfortunately, I wasn't able to achieve a significant increase over the baseline accuracy (covered in the [ML Results](#ml-results) section). But I was able to build the interactive dashboard and included instructions to set up the data source in the [Dashboard Setup](#dashboard-setup) section.
 
 
 ## Overview
@@ -40,7 +40,7 @@ Another thing I found interesting was the low arrest rate. The arrest rate for a
 
 My main goal for this model was to accurately predict whether an arrest will be made for a crime in the city of Chicago.  
 
-Because of the large amount of data available, I decided to rely on non-parametric models. The two I tried were the Random Forest algorithm (sklearn's implementation) and the Feed-Forward Neural Network (using tensorflow.keras' Sequential model with Dense and Dropout layers). To speed up the model tuning phase, I only used the most recent 100,000 crimes from the training set.    
+Because of the large amount of data available, I decided to rely on non-parametric models. Two of the models I tried were the Random Forest algorithm (sklearn's implementation) and the Feed-Forward Neural Network (using tensorflow.keras' Sequential model with Dense and Dropout layers). To speed up the model tuning phase, I only used the most recent 100,000 crimes from the training set.    
 
 After performing hyper-parameter tuning on both models, I was able to achieve 87.7% accuracy. At first glance, this seems to be a good score, but the validation set I was using during hyper-parameter tuning only had an 19.4% arrest rate, so just predicting no arrest every time would achieve an accuracy score of 80.6%. In order to ensure that the issue wasn't the subset of data I was using to train the models, I also trained both using the entire training set but wasn't able to achieve a better accuracy.
 
@@ -48,4 +48,9 @@ Because the best I was able to achieve was only 7% higher than the baseline vali
 
 In the future, I hope to reattempt this problem when I have learned new techniques to help with imbalanced class distributions. One idea I have as of 3/29/2020 is using under-sampling techniques.
 
+
 ## Dashboard Setup
+
+After cloning this repo, you need to download both the general crimes [dataset](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2) and the homicides [dataset](#https://data.cityofchicago.org/Public-Safety/Homicides/k9xv-yxzs). Save these CSV files as crimes_general.csv and crimes_murders.csv, respectively, in the Data folder in your local copy of the repo.  
+
+Next, run the data_preprocessing.py script to create the crimes_cleaned.csv file that will be the data source for the dashboard. After creating the data source, open the dashboard and go into the query editor. In the Source step of the query, change the data source file path to the path of the crimes_cleaned.csv file. Finally, click Close and Apply, and once the query is done refreshing, the dashboard will be ready to go.
