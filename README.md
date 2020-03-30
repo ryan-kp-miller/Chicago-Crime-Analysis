@@ -1,7 +1,8 @@
 # Chicago Crime Analysis
 
-Here I performed an analysis of the crime within Chicago based on this publicly provided [dataset](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2) from the city of Chicago. My two main goals with this project were to create a machine learning model to predict whether a new crime will get an arrest and to build a dashboard using Power BI to allow for interactive exploration of the data. Unfortunately, I wasn't able to achieve a significant increase over the baseline accuracy (covered in the [ML Results](#ml-results) section). But I was able to build the interactive dashboard and included instructions to set up the data source in the [Dashboard Setup](#dashboard-setup) section.
+Here I performed an analysis of the crime within Chicago based on this publicly provided [dataset](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2) from the city of Chicago. My two main goals with this project were to create a machine learning model to predict whether a new crime will get an arrest and to build a dashboard using Power BI to allow for interactive exploration of the data. Unfortunately, I wasn't able to achieve a significant increase over the baseline accuracy (covered in the [ML Results](#ml-results) section). But I was able to build the interactive dashboard, shown below, and included instructions to set up the data source in the [Dashboard Setup](#dashboard-setup) section.
 
+![overview_screenshot](Images/Overview_Screenshot.png)
 
 ## Overview
 
@@ -51,6 +52,57 @@ In the future, I hope to reattempt this problem when I have learned new techniqu
 
 ## Dashboard Setup
 
-After cloning this repo, you need to download both the general crimes [dataset](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2) and the homicides [dataset](#https://data.cityofchicago.org/Public-Safety/Homicides/k9xv-yxzs). Save these CSV files as crimes_general.csv and crimes_murders.csv, respectively, in the Data folder in your local copy of the repo.  
+### Prerequisites
 
-Next, run the data_preprocessing.py script to create the crimes_cleaned.csv file that will be the data source for the dashboard. After creating the data source, open the dashboard and go into the query editor. In the Source step of the query, change the data source file path to the path of the crimes_cleaned.csv file. Finally, click Close and Apply, and once the query is done refreshing, the dashboard will be ready to go.
+You need to have Python installed on your computer and be able to run python
+scripts through your terminal.
+
+```
+python example_script.py
+```
+
+You also need to have Power BI Desktop installed. If you don't already, you can download it for free [here](https://www.microsoft.com/en-us/download/details.aspx?id=58494).
+
+
+### Installing
+
+After cloning the repository, navigate to the folder, create and activate a virtual environment, and install the required packages in the requirements.txt file.
+
+For Windows machines:
+```
+cd path/to/repo/folder
+python -m venv env
+cd env/scripts
+activate
+cd ../..
+python -m pip install -r requirements.txt
+```
+
+
+### Running the Dashboard
+
+Before you can use the dashboard, you need to first download both the general crimes [dataset](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2) and the homicides [dataset](#https://data.cityofchicago.org/Public-Safety/Homicides/k9xv-yxzs). Save these CSV files as crimes_general.csv and crimes_murders.csv, respectively, in the Data folder in your local copy of the repo.  
+
+Afterwards, run the data preprocessing script to create the data source for the dashboard.
+
+```
+python data_preprocessing.py
+```
+
+After creating the data source, open the dashboard and go into the query editor. In the Source step of the query, change the data source file path to the path of the crimes_cleaned.csv file.
+
+![Data_Source_File_Path_Screenshot](Images/Data_Source_File_Path_Screenshot.png)
+
+ Finally, click Close and Apply, and once the query is done refreshing, the dashboard will be ready to go!
+
+
+## Built With
+
+* [Pandas](https://plot.ly/python/plotly-express/) - The framework used to build the chart
+* [Scikit-Learn](https://scikit-learn.org/stable/) - The framework used to build the machine learning models
+* [Keras](https://www.tensorflow.org/guide/keras) - The framework used to build the deep learning models
+* [Power BI](https://pypi.org/project/yfinance/) - The software used to build the dashboard
+
+## Author
+
+* **Ryan Miller** - [Portfolio](https://ryan-kp-miller.github.io/)
