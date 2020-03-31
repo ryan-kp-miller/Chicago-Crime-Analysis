@@ -1,6 +1,6 @@
 # Chicago Crime Analysis
 
-Here I performed an analysis of the crime within Chicago based on this publicly provided [dataset](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2) from the city of Chicago. My two main goals with this project were to create a machine learning model to predict whether a new crime will get an arrest and to build a dashboard using Power BI to allow for interactive exploration of the data. Unfortunately, I wasn't able to achieve a significant increase over the baseline accuracy (covered in the [ML Results](#ml-results) section). But I was able to build the interactive dashboard, shown below, and included instructions to set up the data source in the [Dashboard Setup](#dashboard-setup) section.
+Here I performed an analysis of crime within Chicago based on publicly provided data from the city of Chicago. My main goal was to learn more about crime throughout Chicago by exploring the data and then to build a dashboard using Power BI to allow others to also explore the data. My secondary goal was to create a machine learning model to predict whether a new crime will get an arrest, so I could gain some experience applying machine learning to real-world data. Unfortunately, I wasn't able to achieve a significant increase over the baseline accuracy (covered in the [ML Results](#ml-results) section). But I was able to build an interactive dashboard, shown below, and included instructions on how to set up the data source in the [Dashboard Setup](#dashboard-setup) section.
 
 ![overview_screenshot](Images/Overview_Screenshot.PNG)
 
@@ -12,7 +12,7 @@ This project is broken up into four main files:
   - [Predicting_Arrests.ipynb](https://github.com/ryan-kp-miller/Chicago-Crime-Analysis/blob/master/Predicting_Arrests.ipynb)
   - [Chicago_Crime_Dashboard.pbix](https://github.com/ryan-kp-miller/Chicago-Crime-Analysis/blob/master/Chicago_Crime_Dashboard.pbix)
 
-The first two Jupyter Notebooks go into detail on how and why I chose to preprocess the data and what I found when exploring the data respectively. I will summarize these details in the [Data Preprocessing](#data-preprocessing) and [Data Exploration](#data-exploration) sections below.
+The first two Jupyter Notebooks go into detail on how and why I chose to preprocess the data and what I found when exploring the data respectively. The summaries from the notebooks are in the [Data Preprocessing](#data-preprocessing) and [Data Exploration](#data-exploration) sections below.
 
 The third notebook, Predicting_Arrests.ipynb, shows some of the attempts I made at predicting whether an arrest will occur for a new crime and talks about the results of my attempts. In [ML Results](#ml-results), I will reiterate what was covered in the notebook, why I did what I did, and my future goals for this model.
 
@@ -39,7 +39,7 @@ Another thing I found interesting was the low arrest rate. The arrest rate for a
 
 ## ML Results  
 
-My main goal for this model was to accurately predict whether an arrest will be made for a crime in the city of Chicago.  
+My goal for this model was to accurately predict whether an arrest will be made for a crime in the city of Chicago.  
 
 Because of the large amount of data available, I decided to rely on non-parametric models. Two of the models I tried were the Random Forest algorithm (sklearn's implementation) and the Feed-Forward Neural Network (using tensorflow.keras' Sequential model with Dense and Dropout layers). To speed up the model tuning phase, I only used the most recent 100,000 crimes from the training set.    
 
@@ -100,9 +100,9 @@ After creating the data source, open the dashboard and go into the query editor.
 
 * [Pandas](https://plot.ly/python/plotly-express/) - The framework used to preprocess the data
 * [Matplotlib](https://matplotlib.org/) - The framework used to visually explore the data
+* [Power BI](https://pypi.org/project/yfinance/) - The software used to build the dashboard
 * [Scikit-Learn](https://scikit-learn.org/stable/) - The framework used to build the machine learning models
 * [Keras](https://www.tensorflow.org/guide/keras) - The framework used to build the deep learning models
-* [Power BI](https://pypi.org/project/yfinance/) - The software used to build the dashboard
 
 ## Author
 
