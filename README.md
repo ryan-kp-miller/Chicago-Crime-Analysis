@@ -104,6 +104,7 @@ After creating the data source, open the dashboard and go into the query editor.
 * [Scikit-Learn](https://scikit-learn.org/stable/) - The framework used to build the machine learning models
 * [Keras](https://www.tensorflow.org/guide/keras) - The framework used to build the deep learning models
 
-## Author
+## Author's Info
 
-* **Ryan Miller** - [Portfolio](https://ryan-kp-miller.github.io/)
+* Portfolio - https://ryan-kp-miller.github.io/  
+* Email - ryan.kp.miller@gmail.com
