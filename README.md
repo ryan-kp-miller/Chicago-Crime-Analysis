@@ -8,6 +8,7 @@ Here I performed an analysis of crime within Chicago based on publicly provided 
 
 This project is broken up into four main files:
   - [Data_Preprocessing.ipynb](https://github.com/ryan-kp-miller/Chicago-Crime-Analysis/blob/master/Data_Preprocessing.ipynb)
+    - Or [Data_Preprocessing_PySpark.ipynb](https://github.com/ryan-kp-miller/Chicago-Crime-Analysis/blob/master/Data_Preprocessing_PySpark.ipynb) if you have PySpark installed.
   - [Data_Exploration.ipynb](https://github.com/ryan-kp-miller/Chicago-Crime-Analysis/blob/master/Data_Exploration.ipynb)
   - [Predicting_Arrests.ipynb](https://github.com/ryan-kp-miller/Chicago-Crime-Analysis/blob/master/Predicting_Arrests.ipynb)
   - [Chicago_Crime_Dashboard.pbix](https://github.com/ryan-kp-miller/Chicago-Crime-Analysis/blob/master/Chicago_Crime_Dashboard.pbix)
@@ -26,6 +27,10 @@ As of 3/10/2020, the [dataset](https://data.cityofchicago.org/Public-Safety/Crim
 After reducing the size of the dataset, I cleaned up the text columns by manually matching values of each column with a smaller subset of categories in excel, mapped the Community Area ID's to their name and group (e.g. Community Area 8 maps to Near North Side and Central) based on [this](https://en.wikipedia.org/wiki/Community_areas_in_Chicago) Wikipedia page, and added some categorical columns based on the date of the crime.  
 
 Also added in the Community Area population sizes from the [2010 Census](https://www.chicago.gov/content/dam/city/depts/zlup/Zoning_Main_Page/Publications/Census_2010_Community_Area_Profiles/Census_2010_and_2000_CA_Populations.pdf) to allow for an approximated Crimes/Homicides per Capita calculation. Unfortunately, this data isn't provided year over year and as of 3/30/2020, the 2020 Census isn't available, which is why I needed to use 2010 population sizes.
+
+As of 11/6/2020, I included a new data preprocessing notebook with the data cleaning rewritten using PySpark. With PySpark and SparkSQL, I was able to reduce the time to clean the data to under 1 minute (this only includes cleaning the entire dataset and storing the result to a CSV; i.e. the last cell in the notebook).  
+
+If you have Apache Spark and PySpark installed and are able to run it locally using an iPython notebook, running the Data_Preprocessing_PySpark.ipynb notebook will save you some time while still giving the same result.
 
 
 ## Data Exploration
@@ -99,6 +104,7 @@ After creating the data source, open the dashboard and go into the query editor.
 ## Built With
 
 * [Pandas](https://plot.ly/python/plotly-express/) - The framework used to preprocess the data
+* [Apache Spark](https://spark.apache.org/) - The framework used to quickly preprocess the data
 * [Matplotlib](https://matplotlib.org/) - The framework used to visually explore the data
 * [Power BI](https://pypi.org/project/yfinance/) - The software used to build the dashboard
 * [Scikit-Learn](https://scikit-learn.org/stable/) - The framework used to build the machine learning models
