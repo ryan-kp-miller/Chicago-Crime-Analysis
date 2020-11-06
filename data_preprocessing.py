@@ -24,16 +24,19 @@ crimes['Arrest'] = crimes['Arrest'].astype(int)
 
 # Reducing the Number of Crimes
 
-#filter for crimes between 2010-2019
-crimes_cleaned = crimes[(crimes.Year >= 2010) & (crimes.Year <= 2019)].copy()
+#getting date of 4 months ago
+date_4months_prev = dt.date.today() + relativedelta(months=-4)
+
+#removing crimes from over 10 years ago and the most recent 4 months
+crimes_cleaned = crimes[(crimes.Year >= 2010) & (crimes.Date <= date_4months_prev)].copy()
 
 
 # Removing Unneeded Columns
 
 #creating a list of the columns to drop
-drop_cols = ['ID','Case Number', 'Block', 'Description', 
-             'Beat', 'District', 'Ward', 'IUCR', 'FBI Code', 
-             'Location', 'X Coordinate', 'Y Coordinate', 
+drop_cols = ['ID','Case Number', 'Block', 'Description',
+             'Beat', 'District', 'Ward', 'IUCR', 'FBI Code',
+             'X Coordinate', 'Y Coordinate', 'Latitude', 'Longitude',
              'Updated On']
 
 #dropping the columns
